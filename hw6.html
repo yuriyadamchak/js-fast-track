@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Homework #6</title>
+  </head>
+
+  <!-- Task #2 -->
+  <body>
+    <img class="image" src="dog.jpg" />
+
+    <script>
+      const img = document.querySelector(".image");
+      img.src = "cat.jpg";
+      alert(img.outerHTML);
+    </script>
+  </body>
+  <body>
+    <script src="hw6.js"></script>
+  </body>
+
+  <!-- Task #3 -->
+  <body>
+    <h2>Article header</h2>
+
+    <div id="text">
+      <p>First paragraph</p>
+      <p>Second paragraph</p>
+      <p>Third paragraph</p>
+    </div>
+
+    <p>Another text</p>
+
+    <script>
+      const paragraph = document.querySelectorAll("#text p");
+
+      paragraph.forEach((para, index) => {
+        console.log(`Selector text ${index}: ${para.textContent}`);
+      });
+    </script>
+  </body>
+
+  <!-- Task #5 -->
+  <body>
+    <h1>I'm a big header!!!</h1>
+
+    <div id="myDiv">
+      <p>First paragraph</p>
+
+      <p>Second paragraph</p>
+
+      <p>Third paragraph</p>
+
+      <p>Fourth paragraph</p>
+    </div>
+
+    <ul id="myList">
+      <li>Make</li>
+
+      <li>me</li>
+
+      <li>horizontal !</li>
+    </ul>
+
+    <span>Make me invisible, please!</span>
+
+    <script>
+      const header = document.querySelector("h1");
+      header.style.backgroundColor = "lightgreen";
+      header.style.fontWeight = "bold";
+
+      const paragraphs = document.querySelectorAll("#myDiv p");
+      if (paragraphs.length >= 4) {
+        paragraphs[0].style.fontWeight = "bold";
+        paragraphs[1].style.color = "red";
+        paragraphs[2].style.textDecoration = "underline";
+        paragraphs[3].style.fontStyle = "italic";
+      }
+
+      const listItems = document.querySelectorAll("#myList li");
+      listItems.forEach((item) => {
+        item.style.display = "inline";
+      });
+
+      const span = document.querySelector("span");
+      span.style.display = "none";
+    </script>
+  </body>
+
+  <!-- Task #6 -->
+  <body>
+    <input type="text" id="input1" value="Text1">
+    <input type="text" id="input2" value="Text2">
+  
+    <script>
+      const msg1 = prompt('Enter the first message:');
+      const msg2 = prompt('Enter the second message:');
+
+      const inp1 = document.getElementById('input1');
+      const inp2 = document.getElementById('input2');
+  
+      inp1.value = msg1;
+      inp2.value = msg2;
+
+      const temp = inp1.value; // temporary holder
+      inp1.value = inp2.value;
+      inp2.value = temp;
+    </script>
+  </body>
+
+</html>
