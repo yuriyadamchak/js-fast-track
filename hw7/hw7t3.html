@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body {
+    background-color: white;
+  }
+  #myLink {
+    background-color: white;
+    padding: 5px;
+  }
+</style>
+<script>
+  function changeToBlue() {
+    document.body.style.backgroundColor = "blue";
+    document.getElementById("myLink").style.backgroundColor = "blue";
+  }
+
+  function changeToPink() {
+    document.body.style.backgroundColor = "pink";
+    document.getElementById("myLink").style.backgroundColor = "pink";
+  }
+
+  function changeToBrown() {
+    document.body.style.backgroundColor = "brown";
+    document.getElementById("myLink").style.backgroundColor = "brown";
+  }
+
+  function changeToWhite() {
+    document.body.style.backgroundColor = "white";
+    document.getElementById("myLink").style.backgroundColor = "white";
+  }
+
+  function changeToYellow() {
+    document.body.style.backgroundColor = "yellow";
+    document.getElementById("myLink").style.backgroundColor = "yellow";
+  }
+  
+</script>
+</head>
+<body>
+  <button onclick="changeToBlue()">Change to Blue</button>
+  <button ondblclick="changeToPink()">Change to Pink</button>
+  <button onmousedown="changeToBrown()" onmouseup="changeToWhite()">Change to Brown (Hold)</button>
+  <a href="#" id="myLink" onmouseover="changeToYellow()" onmouseout="changeToWhite()">Hover Over Me</a>
+</body>
+</html>

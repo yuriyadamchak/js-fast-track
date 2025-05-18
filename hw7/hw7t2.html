@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Change Style Example</title>
+<style>
+  #text {
+    color: black;
+    font-size: 16px;
+    font-family: "Arial";
+  }
+</style>
+<script>
+  function changeCSS() {
+    const pElement = document.getElementById("text");
+    pElement.style.color = "orange";
+    pElement.style.fontSize = "20px";
+    pElement.style.fontFamily = "Comic Sans MS";
+  }
+</script>
+</head>
+<body>
+  <p id="text">I learn JavaScript events!</p>
+  <div>
+    <button onclick="changeCSS()">Change style!</button>
+  </div>
+</body>
+</html>

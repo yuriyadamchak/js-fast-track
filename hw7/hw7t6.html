@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #sizeDisplay {
+            font-size: 20px;
+            font-family: Arial, sans-serif;
+            color: #333;
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        function displayWindowSize() {
+            let width = window.innerWidth;
+            let height = window.innerHeight;
+
+            let sizeText = "Width: " + width + ", Height: " + height;
+            document.getElementById("sizeDisplay").innerHTML = sizeText;
+        }
+
+        window.onload = displayWindowSize;
+        window.onresize = displayWindowSize;
+    </script>
+</head>
+<body>
+    <div id="sizeDisplay"></div>
+</body>
+</html>

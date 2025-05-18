@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+  function showPressed() {
+    document.getElementById("message").innerHTML = "I was pressed!";
+  }
+
+  function showMouseOn() {
+    document.getElementById("message").innerHTML = "Mouse on me!";
+  }
+
+  function showMouseOff() {
+    document.getElementById("message").innerHTML = "Mouse is not on me!";
+  }
+</script>
+</head>
+<body>
+  <button onclick="showPressed()" onmouseover="showMouseOn()" onmouseout="showMouseOff()">Live button!</button>
+  <p id="message"></p>
+</body>
+</html>

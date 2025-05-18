@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+    <select id="mySelect">
+        <option value="Peter">Peter</option>
+        <option value="John">John</option>
+        <option value="Alise">Alise</option>
+        <option value="Alex">Alex</option>
+        <option value="Iren">Iren</option>
+    </select>
+
+    <button onclick="deleteOption()">Choose and Delete</button>
+
+    <script>
+        function deleteOption() {
+            const selectElement = document.getElementById("mySelect");
+            const selectedIndex = selectElement.selectedIndex;
+
+            if (selectedIndex !== -1) {
+                selectElement.remove(selectedIndex);
+            }
+        }
+    </script>
+</body>
+</html>
